@@ -1,0 +1,21 @@
+version: '3.1'
+# NOTE: move this answer file up a directory so it'll work
+
+services:
+  sonarqube:
+    image: sonarqube:community
+    ports:
+      - "9000:9000"
+    volumes:
+      - conf:/opt/sonarqube/conf
+      - data:/opt/sonarqube/data
+      - logs:/opt/sonarqube/logs
+      - extensions:/opt/sonarqube/extensions
+
+volumes:
+  conf:
+  data:
+  logs:
+  extensions:
+
+
